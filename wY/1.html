@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/shouYe.css">
+    <title>tup</title>
+</head>
+<body>
+
+<!--头-->
+    <div id="tou" class="tou">
+         <ul class="daoHang">
+            <li><a href="../index.html">首页</a></li>
+            <li>
+                <a href="">图片</a>
+            </li>
+
+        </ul> 
+    </div>
+<!--头-->
+
+<!--主体-->
+    <div id="zhuTi" class="zhuTi">
+
+
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+        <ul class="anNiu">
+            <li id="_1"><a href="1.html">1</a></li>
+            <li id="_2"><a href="2.html">2</a></li>
+        </ul>
+
+    </div>
+<!--主体-->
+
+<!--尾-->
+<div id="wei" class="wei">
+
+    <div>
+        图片不可用作商业，因为这是我从百度上下的
+    </div>
+
+
+</div>
+<!--尾-->
+
+<script>
+
+    var liBiao=document.getElementsByTagName("li");
+    liBiao[1].style.cssText="background-color:rgba(0, 200, 200, 1)";  
+
+
+
+    var a=document.getElementsByClassName("zhuTi");
+    var b=document.getElementsByTagName("ul");
+    var c=document.getElementsByTagName("img");
+    var index="_1"
+    var iD=document.getElementById(index);
+    iD.classList.add("border-radius");
+    iD.style.cssText="border-radius:50%";
+    var lj=[];
+    for(var i=0;i<=8;i++)
+    {
+        var t=Math.floor(Math.random()*24+9);
+        var f=0;
+        for(var j=0;j<=i;j++)
+        {
+            if(lj[j]==t)
+            {
+                i--;
+                f=1;
+                break;
+            }
+        }
+        if(f==1)continue;
+        lj.unshift(t);
+        
+    }
+
+    for(var i=0;i<=8;i++)
+    {
+        
+        c[i].setAttribute("src","../img/"+lj[i]+".jpg");
+    }
+
+    var tuPian=document.getElementsByTagName("img");
+
+    var tuPian=document.getElementsByTagName("img");
+    console.log(tuPian);
+    for(let i=0;i<tuPian.length;i++)
+    {
+        tuPian[i].onclick=function()
+        {
+
+            var bJ=document.getElementsByTagName("dj")
+            console.log(tuPian[i].src);
+            bJ[0].style.backgroundImage=`url(${tuPian[i].src})`;
+
+        }
+    }
+    
+
+
+</script>
+
+
+</body>
+</html>

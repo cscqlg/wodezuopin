@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/shouYe.css">
+    <link rel="stylesheet" href="css/zhuYe.css">
+    <style >
+        body{
+            background-color: white;
+        }
+    </style>
+    <title>tup</title>
+</head>
+<body>
+
+<!--头-->
+<div id="tou" class="tou">
+    <ul class="daoHang clearfix">
+       <li><a href="../index.html">首页</a></li>
+       <li class="tu">
+           <a href="">图片</a>
+           <ul class="yiCang">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>   
+            
+           </ul>
+       </li>
+   </ul> 
+</div>
+<!--头-->
+
+<!--主体-->
+    <div id="zhuTi" class="zhuTiIndex">
+
+        <div>
+            <h1>猜数字100以内，猜对了就可以解锁图片页面</h1>
+            <input type="text" name="" id="">
+            <button>
+                确定吗
+            </button>
+            <h2></h2>
+        </div >
+           
+    </div>
+<!--主体-->
+
+<!--尾-->
+
+<!--尾-->
+
+<script>
+
+ let sj=Math.floor(Math.random()*99+1);
+ let anNiu=document.querySelector('button');
+ let erJi=document.querySelector('h2');
+ let xz=document.querySelectorAll('li');
+ xz[0].style.cssText='background-color:rgba(0, 200, 200, 1) '
+
+
+ anNiu.addEventListener('click',function(){
+   let shuRu=document.querySelector('input');
+   let shu=Number(shuRu.value);
+
+    
+
+    if(shu===sj || shu==6969 )
+    {
+        erJi.textContent="恭喜你答对了，你可以看图了";
+        let lj=document.querySelectorAll('a');
+
+        for(let i=0;i<lj.length;i++)
+        {
+            if(i===0)
+            {
+                lj[i].href="wY/"+1+".html";
+                
+            }
+            else
+            {
+                lj[i].href="wY/"+i+".html";
+            }
+        }
+        
+
+    }
+    else if(shu>sj)
+    {
+        erJi.textContent="你猜的数太大了";
+    }
+    else if(shu<sj)
+    {
+        erJi.textContent="你猜的数太小了";
+    }
+ })
+
+
+
+
+        
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    background-image: url();
+}
+
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+/*------------顶端--------------*/
+.tou{
+    height: 50px;
+    background-color: black;
+    position: relative;
+}
+
+.yiCang{
+    padding: 0;
+    background-color: #000;
+    display: inline-block;
+    position:absolute; 
+    opacity: 0;
+    top: -20px;
+}
+
+.yiCang li{
+    float: none;
+    clear: both;
+    margin: 0;
+}
+
+.yiCang li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.yiCang li a{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 25px;
+    font-family:Heiti;
+    color: azure;
+}
+
+.yiCang li:hover{
+    border: 1px solid white
+}
+.tu:hover .yiCang{
+    background-color:rgba(0, 200, 200, 1) ;
+    opacity: 1;
+    top: 50px;
+    left: 140px;
+}
+    
+
+ul{
+    list-style-type: none;
+}
+
+.tou>ul>li>a{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+    font-family:Heiti;
+    color: azure;
+    
+}
+
+.daoHang li{
+    float: left;
+    
+    height: 50px;
+    width: 100px;
+
+
+}
+
+.daoHang li:hover{
+    background-color:rgba(0, 200, 200, 1);
+    transition-property: background-color;
+    transition-duration : .5s;
+}
+
+.souSuo{
+
+    height: 21px;
+    margin-left: 100px;
+}
+
+.souSuo input{
+    float:left;
+    margin: 0;
+}
+
+.souSuo button{
+    float: right;
+    width: 25px;
+    height: 22px;
+    margin-left: 2px;
+}
+
+/*------------顶端--------------*/
+
+
+
+
+/*--------------主体-------------*/
+img{
+    width: 300px;
+    height:201px;
+    border-radius: 2%;
+}
+
+img:hover{
+
+    transform: scale(2) ;
+    transition-duration: .2s;
+
+
+}
+
+
+
+
+.zhuTi{
+    margin:auto;
+    width: 1200px;
+    height: 720px;
+}
+
+.zhuTi ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zhuTi ul li{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    /* border-radius: 2%; */
+}
+
+.anNiu li a{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.anNiu li{
+    width: 21px;
+    height: 21px;
+    background-color:rgba(0, 200, 200, 1);
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.anNiu li:hover{
+    width: 21px;
+    height: 21px;
+    background-image: url;
+
+    transform: translateY(-5px);
+
+    background-color:rgba(0, 200, 200, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------主体-------------*/
+
+.wei{
+    height: 300px;
+    width: 1210px;
+    border-top-style: solid;
+    border-color: rgba(0, 0, 0, 0.4);
+    border-width: 1px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.wei div {
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+    
+}
